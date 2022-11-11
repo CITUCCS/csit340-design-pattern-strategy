@@ -1,1 +1,1 @@
-# Ducks
+# Strategy
