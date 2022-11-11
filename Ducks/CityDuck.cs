@@ -1,16 +1,15 @@
-﻿namespace Ducks
+﻿using Ducks.Behaviors.Fly;
+using Ducks.Behaviors.Quack;
+
+namespace Ducks
 {
     public class CityDuck : Duck
     {
-        public override void Quack()
+        // We are now able to share Normal quacking behavior...
+        public CityDuck() : base(new CityFlyBehavior(), new NormalQuackBehavior())
         {
-            // Same behavior with WildDuck
-            Console.WriteLine("Normal Quacking...");
         }
-        public override void Fly()
-        {
-            Console.WriteLine("City Flying...");
-        }
+
         public override void Display()
         {
             Console.WriteLine("City Duck!");

@@ -1,15 +1,14 @@
-﻿namespace Ducks
+﻿using Ducks.Behaviors.Fly;
+using Ducks.Behaviors.Quack;
+
+namespace Ducks
 {
     public class RubberDuck : Duck
     {
-        public override void Quack()
+        public RubberDuck() : base(new NoFlyBehavior(), new SqueekBehavior())
         {
-            Console.WriteLine("SQUEEEK!");
         }
-        public override void Fly()
-        {
-            Console.WriteLine("No flying behavior...");
-        }
+
         public override void Display()
         {
             Console.WriteLine("Rubber Duck!");

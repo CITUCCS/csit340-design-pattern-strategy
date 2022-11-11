@@ -3,6 +3,7 @@
 DuckShowcase(new WildDuck());
 DuckShowcase(new CityDuck());
 DuckShowcase(new RubberDuck());
+DuckShowcase(new ModelDuck());
 
 void DuckShowcase(Duck duck)
 {
